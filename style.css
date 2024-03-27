@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --boxSize: 220px;
+  --transition: 0.3s;
+}
+body {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 50px 10px;
+  gap: 15px;
+}
+main > div,
+main > button {
+  height: var(--boxSize);
+  aspect-ratio: 1/1;
+}
+main button.creat-btn {
+  border-radius: 5px;
+  background-color: rgb(240, 235, 235);
+  border: 1px solid black;
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main button.creat-btn:hover {
+  background-color: white;
+}
+main button.creat-btn .add {
+  font-size: 90px;
+}
+main .note {
+  border: 1px solid rgb(153, 142, 142);
+  position: relative;
+}
+main .note form {
+  height: calc(100% - 20px);
+  width: 100%;
+}
+main .note textarea {
+  resize: none;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  padding: 38px 20px;
+  color: black;
+}
+main .note .note-colors {
+  height: 20px;
+  display: flex;
+  width: 100%;
+}
+main .note .note-colors .color {
+  display: block;
+  height: 100%;
+  flex-basis: 20%;
+  cursor: pointer;
+}
+.delete-Btn {
+  font-size: 20px;
+  background-color: cornsilk;
+  color: red;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.delete-Btn::selection {
+  user-select: none;
+}
